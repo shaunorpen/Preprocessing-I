@@ -141,13 +141,14 @@ body {
   box-sizing: border-box;
 }
 .container {
-  width: 870px;
+  max-width: 870px;
   margin: 0 auto;
 }
 .container nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
   padding: 33px 0px;
 }
 .container nav a {
@@ -164,6 +165,11 @@ body {
 .container .jumbotron .headshot {
   width: 300px;
   margin-top: 38px;
+}
+@media (max-width: 500px) {
+  .container .jumbotron .headshot {
+    display: none;
+  }
 }
 .container .jumbotron .headshot img {
   width: inherit;
@@ -199,14 +205,37 @@ body {
 }
 .container .mainContent {
   display: flex;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.container .mainContent .leftContainer,
+@media (max-width: 500px) {
+  .container .mainContent {
+    flex-direction: column;
+  }
+}
+.container .mainContent .leftContainer {
+  width: 50%;
+  padding: 10px 0px;
+  margin-top: 25px;
+}
+@media (max-width: 500px) {
+  .container .mainContent .leftContainer {
+    width: 100%;
+    padding: 10px;
+  }
+}
 .container .mainContent .rightContainer {
   width: 50%;
   padding: 10px 0px;
   margin-top: 25px;
+}
+@media (max-width: 500px) {
+  .container .mainContent .rightContainer {
+    width: 100%;
+    padding: 10px;
+  }
 }
 .container .mainContent .leftContainer {
   padding-right: 10px;
@@ -215,12 +244,12 @@ body {
   padding-left: 14px;
 }
 .container .mainContent .rightContainer ul {
-  border: 1px solid grey;
+  border: 1px solid #E7E9EC;
   border-radius: 7px;
 }
 .container .mainContent .rightContainer li {
   padding: 16px 16px 16px 20px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #E7E9EC;
 }
 .container .mainContent .rightContainer li:last-of-type {
   border-bottom: none;
@@ -246,12 +275,10 @@ body {
 }
 .container .workHistory tr {
   border-top: 1px solid #E7E9EC;
+  border-bottom: 1px solid #E7E9EC;
 }
 .container .workHistory td {
   padding: 16px 12px;
-}
-.container .workHistory td:last-of-type {
-  border-bottom: 1px solid #E7E9EC;
 }
 .container .workHistory thead {
   font-weight: bold;
