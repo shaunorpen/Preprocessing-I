@@ -153,10 +153,31 @@ body {
 }
 .container .jumbotron {
   background-color: lightgrey;
+  border: 1px solid black;
+  padding: 30px;
 }
 .container .jumbotron .headshot {
   width: 300px;
+  margin-top: 38px;
 }
 .container .jumbotron .headshot img {
-  width: 100%;
+  width: inherit;
+}
+.container .jumbotron h1 {
+  font-size: 4rem;
+}
+.container .jumbotron h3 {
+  font-size: 1.5rem;
+}
+.container .jumbotron p {
+  padding: 10px 0px;
+}
+.container .jumbotron a {
+  display: block;
+  width: 150px;
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
 }
