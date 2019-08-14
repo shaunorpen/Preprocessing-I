@@ -134,3 +134,29 @@ html,
 body {
   height: 100%;
 }
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 870px;
+  margin: 0 auto;
+}
+.container nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 0px;
+}
+.container nav a {
+  padding-left: 38px;
+  text-decoration: none;
+}
+.container .jumbotron {
+  background-color: lightgrey;
+}
+.container .jumbotron .headshot {
+  width: 300px;
+}
+.container .jumbotron .headshot img {
+  width: 100%;
+}
