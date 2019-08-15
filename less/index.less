@@ -1,59 +1,205 @@
-// Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import './reset.less';
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+// Colors and borders
+@darkBackgroundColor: #808080;
+@jumbtronBackgroundColor: #EAECEF;
+@borderStandard: 1px solid grey;
+@borderLight: 1px solid #E7E9EC;
+
+// Fonts
+@bodyFont: 'Roboto', sans-serif;
+
+// Mixins
+.flexStandard() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+.containerStyling() {
+    width: 50%;
+    padding: 10px 0px;
+    margin-top: 25px;
+
+    @media (max-width: 500px) {
+        width: 100%;
+        padding: 10px;
+    }
 }
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    font-family: @bodyFont;
 }
 
-/* Set every element's box-sizing to border-box */
 * {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-}
+.container {
+    max-width: 870px;
+    margin: 0 auto;
+    
+    nav {
+        .flexStandard();
+        justify-content: flex-end;
+        padding: 33px 0px;
 
+        a {
+            padding-left: 35px;
+            text-decoration: none;
+            color: @darkBackgroundColor;
+        }
+    }
+
+    .jumbotron {
+        background-color: @jumbtronBackgroundColor;
+        padding: 30px;
+        padding-bottom: 79px;
+        border-radius: 5px;
+
+        .headshot {
+            @media (max-width: 500px) {
+                display: none;
+            }
+            
+            width: 300px;
+            margin-top: 38px;
+
+            img {
+                width: inherit;
+            }
+        }
+
+
+        h1 {
+            font-size: 3.4rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            padding-bottom: 33px;
+            border-bottom: @borderStandard;
+        }
+
+        p {
+            margin-top: 19px;
+            padding: 10px 0px;
+            letter-spacing: 0.015em;
+            line-height: 1.25em;
+        }
+
+        a {
+            display: block;
+            width: 155px;
+            background-color: @darkBackgroundColor;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 8px;
+            margin-left: 2px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.2em;
+        }
+    }
+
+    .mainContent {
+        .flexStandard();
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
+
+        .leftContainer {
+            .containerStyling();
+        }
+
+        .rightContainer {
+            .containerStyling();
+        }
+
+        .leftContainer {
+            padding-right: 10px;
+        }
+
+        .rightContainer {
+            padding-left: 14px;
+
+            ul {
+                border: @borderLight;
+                border-radius: 7px;
+            }
+
+            li {
+                padding: 16px 16px 16px 20px;
+                border-bottom: @borderLight;
+            }
+
+            li:last-of-type {
+                border-bottom: none;
+            }
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        p {
+            line-height: 1.37em;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    .workHistory {
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 11px;
+        }
+        
+        table {
+            width: 100%;
+            margin-bottom: 36px;
+        }
+        
+        tr {
+            border-top: @borderLight;
+            border-bottom: @borderLight;
+        }
+        
+        td {
+            padding: 16px 12px;
+        }
+
+        thead {
+            font-weight: bold;
+        }
+
+        tbody {
+            td:first-of-type {
+                font-weight: bold;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #F2F2F2;
+            }
+        }
+    }
+
+    footer {
+        background: @darkBackgroundColor;
+        padding: 25px;
+        padding-bottom: 39px;
+        text-align: center;
+        color: white;
+    }
+}

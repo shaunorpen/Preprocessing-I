@@ -1,1 +1,298 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 870px;
+  margin: 0 auto;
+}
+.container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 33px 0px;
+}
+.container nav a {
+  padding-left: 35px;
+  text-decoration: none;
+  color: #808080;
+}
+.container .jumbotron {
+  background-color: #EAECEF;
+  padding: 30px;
+  padding-bottom: 79px;
+  border-radius: 5px;
+}
+.container .jumbotron .headshot {
+  width: 300px;
+  margin-top: 38px;
+}
+@media (max-width: 500px) {
+  .container .jumbotron .headshot {
+    display: none;
+  }
+}
+.container .jumbotron .headshot img {
+  width: inherit;
+}
+.container .jumbotron h1 {
+  font-size: 3.4rem;
+  margin-bottom: 15px;
+}
+.container .jumbotron h3 {
+  font-size: 1.2rem;
+  padding-bottom: 33px;
+  border-bottom: 1px solid grey;
+}
+.container .jumbotron p {
+  margin-top: 19px;
+  padding: 10px 0px;
+  letter-spacing: 0.015em;
+  line-height: 1.25em;
+}
+.container .jumbotron a {
+  display: block;
+  width: 155px;
+  background-color: #808080;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2em;
+}
+.container .mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .container .mainContent {
+    flex-direction: column;
+  }
+}
+.container .mainContent .leftContainer {
+  width: 50%;
+  padding: 10px 0px;
+  margin-top: 25px;
+}
+@media (max-width: 500px) {
+  .container .mainContent .leftContainer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.container .mainContent .rightContainer {
+  width: 50%;
+  padding: 10px 0px;
+  margin-top: 25px;
+}
+@media (max-width: 500px) {
+  .container .mainContent .rightContainer {
+    width: 100%;
+    padding: 10px;
+  }
+}
+.container .mainContent .leftContainer {
+  padding-right: 10px;
+}
+.container .mainContent .rightContainer {
+  padding-left: 14px;
+}
+.container .mainContent .rightContainer ul {
+  border: 1px solid #E7E9EC;
+  border-radius: 7px;
+}
+.container .mainContent .rightContainer li {
+  padding: 16px 16px 16px 20px;
+  border-bottom: 1px solid #E7E9EC;
+}
+.container .mainContent .rightContainer li:last-of-type {
+  border-bottom: none;
+}
+.container .mainContent h2 {
+  font-size: 2rem;
+  margin-bottom: 18px;
+}
+.container .mainContent p {
+  line-height: 1.37em;
+}
+.container .mainContent h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.container .workHistory h2 {
+  font-size: 1.5rem;
+  margin-bottom: 11px;
+}
+.container .workHistory table {
+  width: 100%;
+  margin-bottom: 36px;
+}
+.container .workHistory tr {
+  border-top: 1px solid #E7E9EC;
+  border-bottom: 1px solid #E7E9EC;
+}
+.container .workHistory td {
+  padding: 16px 12px;
+}
+.container .workHistory thead {
+  font-weight: bold;
+}
+.container .workHistory tbody td:first-of-type {
+  font-weight: bold;
+}
+.container .workHistory tbody tr:nth-child(odd) {
+  background-color: #F2F2F2;
+}
+.container footer {
+  background: #808080;
+  padding: 25px;
+  padding-bottom: 39px;
+  text-align: center;
+  color: white;
+}
